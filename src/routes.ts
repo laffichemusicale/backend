@@ -9,6 +9,7 @@ import {
     updateTemplate
 } from "./controller/poster/PosterTemplateController";
 import {addConfig, deleteConfig, getConfig, updateConfig} from "./controller/ConfigController";
+import {editPrompt, getPrompt} from "./controller/PromptController";
 
 export const routes = (router: Router) => {
 
@@ -37,6 +38,9 @@ export const routes = (router: Router) => {
     router.put("/api/poster/", addPoster)
     router.delete("/api/poster/", deletePoster)
     router.patch("/api/poster/", updatePoster)
+
+    router.put("/api/prompt", editPrompt)
+    router.get("/api/prompt", getPrompt)
 
 
     //router.delete("api/poster/template/")
